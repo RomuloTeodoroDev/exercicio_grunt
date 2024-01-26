@@ -1,0 +1,118 @@
+@corDeFundo: #12CBC4;
+@corDoBotao: #0652DD;
+@corDoTexto: #fff;
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+*{
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: @corDeFundo;
+    color: @corDoTexto;
+    font-family:'Cinzel', serif;
+}
+
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+
+    @media @breakpointMobile {
+        max-width: 80%;
+    }
+
+    @media @breakpointTablet {
+        max-width: 90%;
+    }
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    
+    img{
+        height: 4em;
+        padding: 8px;
+    }
+    
+    h1{
+        font-size: 3em;
+        font-weight: bold;
+
+        @media @breakpointMobile{
+            text-align: center;
+            font-size: 2em;
+        }
+    }
+}
+
+
+
+form{    
+    input{
+        display: block;
+        max-width: 100vh;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;        
+        background-color:@corDoTexto;
+        text-align:center;
+        border: none;
+        font-size: 1.5em;
+        border-radius: 16px;
+        
+        @media @breakpointMobile{
+            font-size: 1.2em;
+        }
+    }
+    
+    button {
+        max-width: 100vh;
+        width: 100%;
+        font-size: 1.5em;
+        padding: 10px;
+        background-color: @corDoBotao;
+        color: @corDoTexto;
+        border: none;
+        border-radius: 16px;
+        cursor: pointer;
+
+        @media @breakpointMobile{
+            font-size: 1.2em;
+        }
+    }
+}
+
+
+
+table {
+    padding-top: 40px;
+    max-width: 100vh;
+    width: 100%;
+    margin-top: 30px;
+    
+    th {
+        font-size: 2em;
+
+        @media @breakpointMobile{
+            font-size: 1.5em;
+        }
+    }
+    
+    td {
+        padding: 16px;
+        color: @corDoBotao;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.5em;
+        border-bottom: 1px solid @corDoBotao;
+
+        @media @breakpointMobile{
+            font-size: 1em;
+        }
+    }
+}
+
