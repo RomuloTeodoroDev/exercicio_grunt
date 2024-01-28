@@ -14,10 +14,10 @@
         <header>            
             <h1>Agenda de contatos</h1>            
         </header>
-        <form id="form-agenda">
-            <input type="text" id="nome-contato" placeholder="Nome" required>            
-            <input type="tel" id="numero-contato" min="11" max="11" placeholder="Telefone"required >
-            <button type="submit">Salvar +</button>
+        <form id="form-agenda">            
+            <input name="nome" type="text" id="nome-contato" placeholder="Nome" required>            
+            <input name="telefone" type="tel" id="numero-contato" min="11" max="11" placeholder="Telefone" required>
+            <button type="submit">Salvar +</button>                        
         </form>
         <table cellspacing="0">
             <thead>
@@ -29,7 +29,13 @@
             <tbody></tbody>
         </table>
     </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="@@ENDERECO_DO_JS"></script>
-    
+    <script src="../src/scripts/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#numero-contato').mask('(00) 00000-0000')
+        })
+    </script>    
 </body>
 </html>
